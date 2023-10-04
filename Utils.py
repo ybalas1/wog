@@ -1,5 +1,5 @@
 SCORES_FILE_NAME = "Scores.txt"
-BAD_RETURN_CODE = '500'
+BAD_RETURN_CODE = '422'
 
 
 def screen_cleaner():

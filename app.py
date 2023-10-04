@@ -1,4 +1,5 @@
-import current_roullete
+import Score
+import currency_roullete
 import guess_game
 import memory_gamee
 
@@ -66,9 +67,19 @@ def start_play():
           f"Good Luck!")
 
     if game_num_chosen == 1:
-        memory_gamee.play(diff_chosen)
+        game_result = memory_gamee.play(diff_chosen)
+        if game_result:
+            Score.add_score(diff_chosen)
     elif game_num_chosen == 2:
-        guess_game.play(diff_chosen)
+        game_result = guess_game.play(diff_chosen)
+        if game_result:
+            Score.add_score(diff_chosen)
     elif game_num_chosen == 3:
-        current_roullete.play(diff_chosen)
+        game_result = currency_roullete.play(diff_chosen)
+        if game_result:
+            Score.add_score(diff_chosen)
+
+
+
+
 

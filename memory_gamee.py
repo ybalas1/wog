@@ -45,7 +45,8 @@ def play(diff):
     game_result = is_list_equal(gen_arr, user_arr)
     # If user won add score
     if game_result:
-        Score.add_score(diff)
+        return True
     else:
-        pass
+        return False
+
 

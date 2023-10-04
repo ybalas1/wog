@@ -32,8 +32,9 @@ def play(diff):
     num_given = get_guess_from_user()
     result = compare_results(num_given,secret_number)
     if result:
-        Score.add_score(diff)
         print(f"Congrats, you guessed right - the secret number was: {secret_number}")
+        return True
     else:
         print(f"Better luck next time - You guessed {num_given} but the secret number was: {secret_number}")
+        return False
 

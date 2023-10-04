@@ -36,7 +36,6 @@ def play(diff):
     exchange_rate = correct_guess_array[2]
     user_guess = get_guess_from_user()
     if lower_guess <= user_guess <= higher_guess:
-        Score.add_score(diff)
         print(f"You Win, Your Guess:\n{user_guess}\nThe current exchange rate is {exchange_rate}")
         return True
     else:
